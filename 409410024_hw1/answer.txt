@@ -1,0 +1,28 @@
+Hw1
+409410024 資工二 陳品希
+
+Q1:請描述自己安裝與執行 ARM software development tool 的過程(不超過一頁)
+
+我是使用 wsl 並在其上安裝 ARM software development tools。首先，我參考網站
+ https://docs.microsoft.com/zh-tw/windows/wsl/install 輸入 wsl –install 安裝 wsl，
+並重啟我的電腦，然後我下載課程網頁上的 arm-cross-toolchain-linux-64.tar.gz (64-bit Linux)
+並配合 Homework #1 DEMO 影片做安裝並執行。
+原本我也有嘗試使用安裝 virtual box 並在其上安裝 linux 作業系統的方
+法。參考了這個網站：https://progressbar.tw/posts/136。但後來發現會有
+記憶體空間不足的問題，有點麻煩，所以改用了另一個方案。
+
+Q2:請說明 hw1.o 與 hw1.exe 的差別？可能是什麼原因造成的？
+
+hw1.o 的檔案大小與 hw1.s 的檔案大小差不多，都是小於 1KB。但
+hw1.exe 檔卻大上許多，約為 385KB。我覺得可能是因為 hw1.exe 為執行
+檔(已編譯)，而在原始檔編譯過程中需要匯入一些東西以完成編譯動作，
+才會導致執行檔比較大。
+
+Q3:sample_O0.o 與 sample_O3.o 檔案大小的差別？可能是什麼原因造成的？
+
+sample_O0.o 的檔案大小為 1016 個位元組(B)，而 sample_O3.o 的檔案大
+小為 1020 個位元組(B)，兩者相差 4B。上網查後發現-O0 表示沒有優
+化，-O3 優化級別最高，而優化編譯會佔用較多的時間和較大的記憶體，
+所以 sample_O3.o 的檔案大小才會比 sample_O0.o 大。
+
+
